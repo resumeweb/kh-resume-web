@@ -37,6 +37,7 @@ Latest commit 79a6010 last month
 
 target
 pom.properties
+# JDT-specific (Eclipse Java Development Tools)     
 .classpath
 MANIFEST.MF
 Servers
