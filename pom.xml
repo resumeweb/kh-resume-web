@@ -119,6 +119,13 @@
 	</dependencies>
     <build>
         <plugins>
+			<!--pom.xml 첫줄 라인 오류 해결 플러그인  추가: 김효동-->
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-war-plugin</artifactId>
+			  <version>3.3.2</version>
+			</plugin>
+			
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
                 <version>2.9</version>
