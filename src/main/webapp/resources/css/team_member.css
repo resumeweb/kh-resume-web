@@ -1,0 +1,26 @@
+*{
+    border: 1px solid blue;
+}
+.container-fluid{
+    height: 100vh;
+}
+/*******************************************/
+
+/* 화면 배경 설정 */
+#team-project-list {
+    /* background-color: black; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 프로필사진 */
+.member_profile {
+    border: 1px solid black;
+}
+
+/* 사진 이미지 */
+.member_profile_photo {
+    width: 20vh;
+
+    
+}
