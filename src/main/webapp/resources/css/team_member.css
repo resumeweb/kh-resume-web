@@ -8,19 +8,42 @@
 
 /* 화면 배경 설정 */
 #team-project-list {
-    /* background-color: black; */
+    background-color: black;
     display: flex;
+    /* 요소 여러 줄(row)로 정렬 */
     flex-wrap: wrap;
+    /* 세로정렬 */
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+.team-project-list-child{
+    height: 80%;
+    background-color: rebeccapurple;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    flex-direction: column;
 }
 
-/* 프로필사진 */
+/* 프로필을 감싼 Div */
+.member_profile_div{
+    background-color: aqua;
+    /* width: 100%; */
+
+    display: flex;
+    /* 간격띄우고정렬 */
+    justify-content: space-around;
+    /* align-content: center; */
+
+}
+
+/* 프로필전체 */
 .member_profile {
     border: 1px solid black;
 }
 
-/* 사진 이미지 */
+/* 프로필-사진 이미지 */
 .member_profile_photo {
     width: 20vh;
-
-    
 }
+/* 프로필-이름 */
