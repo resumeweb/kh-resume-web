@@ -34,9 +34,8 @@
 
 .btnqq{
     background-color: black;
-    display: inline;
-    border-radius: 50%;
-    width: 50vh;
-    height: 80vh;
-
+    /* display: inline; */
+    /* justify-content: center; */
+    /* border-radius: 50%; */
+    /* width: 100px; */
 }
