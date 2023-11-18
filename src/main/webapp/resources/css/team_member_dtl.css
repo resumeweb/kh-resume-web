@@ -30,13 +30,18 @@
 .test2{
     height: 5vh;
     background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btnqq{
+    height: 3vh;
+    width: 3vh;
+    /* justify-content: center; */
     background-color: black;
-    display: inline;
+    /* display: inline-flex; */
+    /* flex-direction: ; */
     border-radius: 50%;
-    width: 50vh;
-    height: 80vh;
 
 }
