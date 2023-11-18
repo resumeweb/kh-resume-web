@@ -5,7 +5,7 @@
     height: 100vh;
 }
 .text-center{
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 /*******************************************/
@@ -23,25 +23,64 @@
 /*******************************************/
 
 .test1{
-    height: 95vh;
-    background-color: red;
+    /* background-color: red; */
+    height: 80vh;
+    display: flex;
+}
+/* 슬라이드 오른쪽 왼쪽 버튼 */
+.slide_btn2{
+    /* background-color: blueviolet; */
+    /* width: 5%; */
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 임시 슬라이드 버튼 색표시  */
+.slide_btn2 > div{
+    color: white;
 }
 
+.member_info_profile{
+    background-color: blue;
+    flex: 30;
+    margin-right: 30px;
+}
+/*******************************************/
+.info{
+    background-color: #D9D9D9;
+    width: 90%;
+    flex: 60;
+}
+.info > div{
+    height: 50%;
+}
+.info_div1{
+}
+.member_name{
+    background-color: aqua;
+}
+.member_info_div{
+background-color: blue;
+}
+
+.info_div2{
+    border-top: 2px solid black;
+}
+/*******************************************/
 .test2{
-    height: 5vh;
-    background-color: beige;
+    height: 10vh;
+    /* background-color: beige; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.btnqq{
-    height: 3vh;
-    width: 3vh;
-    /* justify-content: center; */
-    background-color: black;
-    /* display: inline-flex; */
-    /* flex-direction: ; */
+/* 슬라이드 하단 원 버튼 */
+.slide_btn{
+    background-color: white;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
-
+    margin: 2px;
 }

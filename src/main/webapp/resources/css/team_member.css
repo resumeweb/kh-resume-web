@@ -23,7 +23,6 @@
 }
 /*******************************************/
 .team-project-list-child{
-    /* background-color: rebeccapurple; */
     height: 80%;
     display: flex;
     justify-content: space-around;
@@ -32,7 +31,6 @@
 /*******************************************/
 /* 프로필을 감싼 Div */
 .member_profile_div{ 
-    /* background-color: aqua; */
     width: 100%; 
     display: flex;
     /* 간격띄우고정렬 */
@@ -43,18 +41,18 @@
 .member_profile {
     border: 1px solid black;
     width: 30%;
+    font-size: 1em;
 }
 
 /* 프로필-사진 이미지 */
 .member_profile_photo {
     background-color: #686767;
     width: 60%;
-    /* width: 20vh; */
 }
 /* 프로필-이름 */
 .mameber_name{
     margin-top: 10px;
     color: white;
-    font-size: 2vh;
+    font-size: 2.5vh;
 }
 /*******************************************/
