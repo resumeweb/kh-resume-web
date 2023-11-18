@@ -4,10 +4,11 @@
 .container-fluid{
     height: 100vh;
 }
-/* .text-center{
-    width: 25vh;
-    height: 100%;
-} */
+
+.text-center{
+    background-color: aqua;
+}
+
 /*******************************************/
 
 /* 화면 배경 설정 - 최상위 */
@@ -30,9 +31,9 @@
 }
 /*******************************************/
 /* 프로필을 감싼 Div */
-.member_profile_div{
+.member_profile_div{ 
     /* background-color: aqua; */
-    width: 100%;
+    width: 100%; 
     display: flex;
     /* 간격띄우고정렬 */
     justify-content: space-evenly;
