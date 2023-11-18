@@ -44,3 +44,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/********************************************************************************************************************************************
+ 스와이퍼 CSS
+ ********************************************************************************************************************************************/
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{opacity:1;background:#3DC5D1}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev { background-image: url('/imagefolder/icon_arrow_next.svg'); }
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next { background-image: url('/imagefolder/icon_arrow_pre.svg'); }
