@@ -1,0 +1,42 @@
+*{
+    border: 1px solid blue;
+}
+.container-fluid{
+    height: 100vh;
+}
+.text-center{
+    background-color: aqua;
+}
+
+/*******************************************/
+
+/* 화면 배경 설정 - 최상위 */
+#team-project-list {
+    background-color: black;
+    display: flex;
+    /* 요소 여러 줄(row)로 정렬 */
+    flex-wrap: wrap;
+    /* 세로정렬 */
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*******************************************/
+
+.test1{
+    height: 95vh;
+    background-color: red;
+}
+
+.test2{
+    height: 5vh;
+    background-color: beige;
+}
+
+.btnqq{
+    background-color: black;
+    display: inline;
+    border-radius: 50%;
+    width: 50vh;
+    height: 80vh;
+
+}
