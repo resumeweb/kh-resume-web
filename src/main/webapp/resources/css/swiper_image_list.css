@@ -1,0 +1,58 @@
+/* .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{opacity:1;background:#3DC5D1} */
+
+/* .button-next { 
+	//background: url('/src/main/webapp/resources/image/small-right.svg');  
+	background-image:  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512" style="fill: white;stroke: white;"><path d="M15.75,9.525,11.164,4.939A1.5,1.5,0,0,0,9.043,7.061l4.586,4.585a.5.5,0,0,1,0,.708L9.043,16.939a1.5,1.5,0,0,0,2.121,2.122l4.586-4.586A3.505,3.505,0,0,0,15.75,9.525Z"/></svg>'); 
+	background-size: 100%;
+	background-position:center;
+	background-repeat:no-repeat;	
+}
+.button-prev { 
+	background-image:  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512" style="fill: white;stroke: white;"><path d="M10.957,12.354a.5.5,0,0,1,0-.708l4.586-4.585a1.5,1.5,0,0,0-2.121-2.122L8.836,9.525a3.505,3.505,0,0,0,0,4.95l4.586,4.586a1.5,1.5,0,0,0,2.121-2.122Z"/></svg>'); 	
+	background-size: 100%;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.button-next,.button-prev {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size)/ 44 * 55);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color))
+}
+
+.button-next.swiper-button-disabled,.button-prev.swiper-button-disabled {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none
+}
+
+.button-next.swiper-button-hidden,.button-prev.swiper-button-hidden {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none
+}
+
+.swiper-navigation-disabled .button-next,.swiper-navigation-disabled .button-prev {
+    display: none!important
+}
+
+.button-prev,.swiper-rtl .button-next {
+    left: 10px;
+    right: auto
+}
+
+.button-next,.swiper-rtl .button-prev {
+    right: 10px;
+    left: auto
+} */
+
+.container-fluid{
+    height: 100vh;
+}

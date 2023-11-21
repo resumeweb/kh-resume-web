@@ -5,15 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 부트스트랩 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- 공통CSS -->
+    <link rel="stylesheet" href="/src/main/webapp/resources/css/common.css">
+    <!-- 해당 화면 CSS -->
+    <link rel="stylesheet" href="/src/main/webapp/resources/css/team_member.css">
     <title>Project List</title>
+
 </head>
 <body>
     <main class="container-fluid d-flex p-0">
+        <!-- 사이드 메뉴 -->
         <div class="text-center" style="flex:1;">
             <div>Side Bar</div>
         </div>
+        <!-- 화면단 -->
         <div id="team-project-list" class="text-center" style="flex:3;">
-            <div>Detail</div>
+            <div class="team-project-list-child">
+                <div class="member_profile_div">
+                    <div class="member_profile">
+                        <img class="member_profile_photo" alt="사진" src="/src/main/webapp/resources/image/defaultProfilePhoto.png">
+                        <div class="mameber_name">홍길동</div>
+                    </div>
+        
+                    <div class="member_profile">
+                        <img class="member_profile_photo" alt="사진" src="/src/main/webapp/resources/image/defaultProfilePhoto.png">
+                        <div class="mameber_name">홍길동</div>
+                    </div>
+        
+                    <div class="member_profile">
+                        <img class="member_profile_photo" alt="사진" src="/src/main/webapp/resources/image/defaultProfilePhoto.png">
+                        <div class="mameber_name">홍길동</div>
+                    </div>
+                    
+                </div>
+                <div class="member_profile_div">
+                    <div class="member_profile">
+                        <img class="member_profile_photo" alt="사진" src="/src/main/webapp/resources/image/defaultProfilePhoto.png">
+                        <div class="mameber_name">홍길동</div>
+                    </div>
+        
+                    <div class="member_profile">
+                        <img class="member_profile_photo" alt="사진" src="/src/main/webapp/resources/image/defaultProfilePhoto.png">
+                        <div class="mameber_name">홍길동</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>

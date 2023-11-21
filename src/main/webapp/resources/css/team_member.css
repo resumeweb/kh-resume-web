@@ -1,0 +1,58 @@
+*{
+    /* border: 1px solid blue; */
+}
+.container-fluid{
+    height: 100vh;
+}
+
+.text-center{
+    background-color: aqua;
+}
+
+/*******************************************/
+
+/* 화면 배경 설정 - 최상위 */
+#team-project-list {
+    background-color: black;
+    display: flex;
+    /* 요소 여러 줄(row)로 정렬 */
+    flex-wrap: wrap;
+    /* 세로정렬 */
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*******************************************/
+.team-project-list-child{
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+/*******************************************/
+/* 프로필을 감싼 Div */
+.member_profile_div{ 
+    width: 100%; 
+    display: flex;
+    /* 간격띄우고정렬 */
+    justify-content: space-evenly;
+}
+/*******************************************/
+/* 프로필전체 */
+.member_profile {
+    border: 1px solid black;
+    width: 30%;
+    font-size: 1em;
+}
+
+/* 프로필-사진 이미지 */
+.member_profile_photo {
+    background-color: #686767;
+    width: 60%;
+}
+/* 프로필-이름 */
+.mameber_name{
+    margin-top: 10px;
+    color: white;
+    font-size: 2.5vh;
+}
+/*******************************************/
