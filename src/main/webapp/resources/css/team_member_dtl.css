@@ -155,13 +155,6 @@
 
 /* 600px 이하 일때 아래 스타일 적용 */
 @media (max-width : 600px){
-    /* 사이드바 위쪽으로 위치 변경 */
-    /* 공통 css */
-    .container-fluid{
-        display: flex;
-        flex-direction: column;
-    }
-    
     .swiper-slide{
         padding: 50px;
     }
