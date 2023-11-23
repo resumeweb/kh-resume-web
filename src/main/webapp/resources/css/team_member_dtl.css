@@ -1,86 +1,193 @@
-*{
-    border: 1px solid blue;
-}
+/* 공통 설정 */
 .container-fluid{
     height: 100vh;
 }
-.text-center{
-    /* background-color: aqua; */
+.swiper{
+    width: 80vw;
+    height: 100%;
 }
-
 /*******************************************/
 
 /* 화면 배경 설정 - 최상위 */
 #team-project-list {
     background-color: black;
     display: flex;
-    /* 요소 여러 줄(row)로 정렬 */
     flex-wrap: wrap;
-    /* 세로정렬 */
     flex-direction: column;
     justify-content: space-around;
 }
 /*******************************************/
 
-.test1{
-    /* background-color: red; */
-    height: 80vh;
+.swiper-slide{
     display: flex;
-}
-/* 슬라이드 오른쪽 왼쪽 버튼 */
-.slide_btn2{
-    /* background-color: blueviolet; */
-    /* width: 5%; */
-    flex: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* 임시 슬라이드 버튼 색표시  */
-.slide_btn2 > div{
-    color: white;
+    padding: 6vw;
 }
 
-.member_info_profile{
-    background-color: blue;
-    flex: 30;
-    margin-right: 30px;
-}
 /*******************************************/
-.info{
-    background-color: #D9D9D9;
-    width: 90%;
-    flex: 60;
+/* 왼쪽 */
+.member_info_profile{
+    flex: 18;
+    margin-right: 50px;
 }
+/* 사진 */
+.member_info_picture{
+    background-color: #686767;
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    /* 이미지 비율16:9 */
+    /* padding-bottom: 56.26%; */
+    /* 이미지 비율4:3 */
+    /* padding-bottom: 75%; */
+    /* 이미지 비율 1:2 */
+    /* padding-bottom: 200%; */
+    /* 이미지 비율 2:1 */
+    /* padding-bottom: 50%; */
+    padding-bottom: 100%;
+    border: solid 1px white;
+}
+/* 사진 이미지 */
+.member_info_picture>img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 프로필 상세보기 */
+.member_info_url{
+    margin-top: 20px;
+    background-color: white;
+    height: 2.5vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+/*******************************************/
+/* 오른쪽 */
+.info{
+    background-color: #ffff;
+    width: 100%;
+    flex: 65;
+}
+/* 타이틀 및 텍스트 전체 */
 .info > div{
     height: 50%;
 }
-.info_div1{
+
+/* 텍스트 - 영역1 */
+.info_div1, .info_div2{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
 }
+/* 텍스트 - 이름 */
 .member_name{
-    background-color: aqua;
-}
-.member_info_div{
-background-color: blue;
+    flex: 1;
+    font-size: 2vw;
+    font-weight: bold;
+    display: flex;
+    padding-left: 30px;
+    align-items: center; 
 }
 
+/* 텍스트 & 타이틀 -  부모 공통설정 */
+.member_introduce_div, .member_info_div, .member_strength_div, .member_career_div{
+    flex: 2;
+    font-size: 1.7vh;
+    padding: 0px 50px 0px 50px;
+    text-align: left;
+}
+
+/* 타이틀 - 공통설정 */
+#title_introduce, #title_info, #title_strength,#title_career{
+    font-size: 2.5vh;
+    color: rgb(255, 157, 0);
+    padding: 15px 0px 5px 0px;
+}
+/* 텍스트 - 공통설정 */
+#info_text> div, #introduce_text, #strength_text> div, #career_text > div{
+    padding-top: 5px;
+}
+
+/* 텍스트 영역2 */
 .info_div2{
     border-top: 2px solid black;
 }
 /*******************************************/
-.test2{
-    height: 10vh;
-    /* background-color: beige; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* 1000px 이하 일때 아래 스타일 적용 */
+@media(max-width : 1000px)  {
+    
+    .swiper-slide{
+        flex-direction: column;
+    }
+    /* 왼쪽 */
+    .member_info_profile{
+        position: absolute;
+        right: 4vw;
+        top: 8%;
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 12vw;
+    }
+    /* 프로필 보기 URL */
+    .member_info_url{
+        border: solid 1px rgb(181, 181, 181);
+        width: 110%;
+        height: 2vw;
+        margin-top: 3px;
+        font-size: 1.3vw;
+    }
+    /* 텍스트 - 이름 */
+    .member_name{
+        font-size: 3vw;
+    }
 }
 
-/* 슬라이드 하단 원 버튼 */
-.slide_btn{
-    background-color: white;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    margin: 2px;
+/* 600px 이하 일때 아래 스타일 적용 */
+@media (max-width : 600px){
+    /* 사이드바 위쪽으로 위치 변경 */
+    /* 공통 css */
+    .container-fluid{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .swiper-slide{
+        padding: 50px;
+    }
+    .swiper{
+        width: 100vw;
+    }
+    /* 이름 */
+    .member_name{
+        font-size: 5vw;
+    }
+    /* 텍스트 & 타이틀 -  부모 공통설정 */
+    .member_introduce_div, .member_info_div, .member_strength_div, .member_career_div{
+        font-size: 2.5vw;
+    }
+    /* 타이틀 - 공통설정*/
+    #title_introduce, #title_info, #title_strength,#title_career{
+        font-size: 4vw;
+    }
+    /* 왼쪽 */
+    .member_info_profile{
+        top: 9%;
+        width: 17vw;
+    }
+    /* 프로필 보기 URL */
+    .member_info_url{
+        height: 3vw;
+        font-size: 2vw;
+    }
 }
