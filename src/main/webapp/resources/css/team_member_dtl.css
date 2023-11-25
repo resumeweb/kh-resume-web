@@ -68,6 +68,13 @@
     font-size: 1.1vw;
     font-weight: bold;
 }
+/* 프로필 상세보기 마우스 포인트 올릴시 효과 */
+.member_info_url:hover{
+    cursor: pointer;
+    transition: all 1s; /* 2초에 걸쳐 변화 */
+    background-color: rgb(189, 186, 186);
+
+}
 
 /*******************************************/
 /* 오른쪽 */
@@ -100,20 +107,27 @@
 /* 텍스트 & 타이틀 -  부모 공통설정 */
 .member_introduce_div, .member_info_div, .member_strength_div, .member_career_div{
     flex: 2;
-    font-size: 1.7vh;
+    /* font-size: 1vw; */
     padding: 0px 50px 0px 50px;
     text-align: left;
 }
 
 /* 타이틀 - 공통설정 */
-#title_introduce, #title_info, #title_strength,#title_career{
-    font-size: 2.5vh;
+#title_introduce, #title_info,#title_career{
+    font-size: 1.6vw;
     color: rgb(255, 157, 0);
     padding: 15px 0px 5px 0px;
+}
+/* 타이틀 - 강점 */
+#title_strength{
+    font-size: 1.6vw;
+    color: rgb(255, 157, 0);
+    padding-bottom: 5px;
 }
 /* 텍스트 - 공통설정 */
 #info_text> div, #introduce_text, #strength_text> div, #career_text > div{
     padding-top: 5px;
+    font-size: 1vw;
 }
 
 /* 텍스트 영역2 */
@@ -132,7 +146,7 @@
     .member_info_profile{
         position: absolute;
         right: 4vw;
-        top: 8%;
+        top: 10%;
         flex: none;
         display: flex;
         flex-direction: column;
@@ -151,6 +165,20 @@
     .member_name{
         font-size: 3vw;
     }
+    /* 타이틀 - 공통설정 */
+    #title_introduce, #title_info,#title_career{
+        font-size: 2.3vw;
+        padding: 10px 0px 5px 0px;
+    }
+    /* 타이틀 - 강점 */
+    #title_strength{
+        font-size: 2.3vw;
+    }
+    /* 텍스트 - 공통설정 */
+    #info_text> div, #introduce_text, #strength_text> div, #career_text > div{
+        padding-top: 5px;
+        font-size: 1.5vw;
+}
 }
 
 /* 600px 이하 일때 아래 스타일 적용 */
@@ -163,19 +191,20 @@
     }
     /* 이름 */
     .member_name{
-        font-size: 5vw;
-    }
-    /* 텍스트 & 타이틀 -  부모 공통설정 */
-    .member_introduce_div, .member_info_div, .member_strength_div, .member_career_div{
-        font-size: 2.5vw;
-    }
-    /* 타이틀 - 공통설정*/
-    #title_introduce, #title_info, #title_strength,#title_career{
         font-size: 4vw;
+    }
+    /* 타이틀 - 공통설정 */
+    #title_introduce, #title_info, #title_strength,#title_career{
+        font-size: 3vw;
+    }
+    /* 텍스트 - 공통설정 */
+    #info_text> div, #introduce_text, #strength_text> div, #career_text > div{
+        padding-top: 5px;
+        font-size: 2vw;
     }
     /* 왼쪽 */
     .member_info_profile{
-        top: 9%;
+        top: 11%;
         width: 17vw;
     }
     /* 프로필 보기 URL */
@@ -184,3 +213,4 @@
         font-size: 2vw;
     }
 }
+

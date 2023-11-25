@@ -34,7 +34,7 @@
 /*******************************************/
 /* 프로필전체 */
 .member_profile {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 30%;
     font-size: 1em;
     margin:40px 0px 40px 0px;
