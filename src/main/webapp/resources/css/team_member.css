@@ -1,14 +1,7 @@
-*{
-    /* border: 1px solid blue; */
-}
+/* 공통 설정 */
 .container-fluid{
     height: 100vh;
 }
-
-.text-center{
-    background-color: aqua;
-}
-
 /*******************************************/
 
 /* 화면 배경 설정 - 최상위 */
@@ -33,15 +26,18 @@
 .member_profile_div{ 
     width: 100%; 
     display: flex;
+    flex-wrap: wrap;
     /* 간격띄우고정렬 */
     justify-content: space-evenly;
+    /* align-content: space-between */
 }
 /*******************************************/
 /* 프로필전체 */
 .member_profile {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 30%;
     font-size: 1em;
+    margin:40px 0px 40px 0px;
 }
 
 /* 프로필-사진 이미지 */
@@ -53,6 +49,21 @@
 .mameber_name{
     margin-top: 10px;
     color: white;
-    font-size: 2.5vh;
+    font-size: 1.5vw;
 }
 /*******************************************/
+
+/* 1000px 이하 일때 아래 스타일 적용 */
+@media (max-width : 1000px){
+
+    /* 프로필 위치 변경 */
+    .member_profile{
+        min-width: 40%;
+    }
+    /* 이름 폰트 사이즈 */
+    .mameber_name{
+        font-size: 1.3em;
+    }
+}
+
+
