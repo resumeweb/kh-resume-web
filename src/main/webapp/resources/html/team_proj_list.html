@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="/src/main/webapp/resources/css/common.css">
+    <!-- <link href="/src/main/webapp/resources/css/swiper_css/swiper.css">
+    <link href="/src/main/webapp/resources/css/swiper_css/swiper.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- <link rel="stylesheet" href="/src/main/webapp/resources/css/swiper_image_list.css"> -->
     <title>Project List</title>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gasp/standalone/gasp.min.js"></script>
-     -->
-     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
         #sideBar {
             height: 100%;
@@ -24,14 +25,6 @@
         .project-box {
             margin-top: 5rem;
             /* position: relative; */
-        }
-
-        .project-box a {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
         }
 
         .image-wrap {
@@ -53,144 +46,155 @@
             color: white;
             font-size: 1.2rem;
         }
-        .page {
-            padding: 3rem;
-            position: absolute;
-            justify-content: center;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: none;
+        .project-box {
+        /* 애니메이션 스타일 지정 */
+            opacity: 0;
+            transform: translateY(200px);
+            transition: opacity 2.5s ease, transform 1s ease;
+        }
+
+        .swiper-slide-active .project-box {
+            /* 활성화된 슬라이드 내의 내용에 대한 애니메이션 */
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <main class="container-fluid d-flex p-0" style="min-height:100vh">
+    <main class="container-fluid d-flex p-0" style="height:100vh">
         <div id="sideBar" class="text-center bg-secondary" style="flex:1; height: 100vh">
             <div>Side Bar</div>
         </div>
-        <div id="pageContainer">
-            <div id="team-project-list" class="page row h-100" style="flex:3; display: flex;">
-                <div class="project-col col text-center h-100 p-20">
-                    <div class="project-box">
-                        <a href="#" onclick="navigateTo('team-project-detail')"></a>
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample1.jpg">
+        <div id="pageContainer" style="overflow: hidden;">
+            <div id="page-wrapper" class="swiper-wrapper">
+                <div id="team-project-list" class="swiper-slide row" style="flex:3;">
+                    <div class="project-col col text-center h-100 p-20">
+                        <div class="project-box">
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample1.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 1
+                            </span>
                         </div>
-                        <span class="project-title">
-                            Project 1
-                        </span>
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample2.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 2
+                            </span>
+                        </div>
                     </div>
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample2.jpg">
+                    <div class="project-col col text-center h-100 p-20">
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample3.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 3
+                            </span>
                         </div>
-                        <span class="project-title">
-                            Project 2
-                        </span>
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample2.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 4
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-col col text-center h-100 p-20">
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample1.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 5
+                            </span>
+                        </div>
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample3.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 6
+                            </span>    
+                        </div>
+                        
                     </div>
                 </div>
-                <div class="project-col col text-center h-100 p-20">
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample3.jpg">
+                <div id="team-project-list" class="swiper-slide row" style="flex:3;">
+                    <div class="project-col col text-center h-100 p-20">
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample1.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 1
+                            </span>
                         </div>
-                        <span class="project-title">
-                            Project 3
-                        </span>
-                    </div>
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample2.jpg">
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample2.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 2
+                            </span>
                         </div>
-                        <span class="project-title">
-                            Project 4
-                        </span>
                     </div>
-                </div>
-                <div class="project-col col text-center h-100 p-20">
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample1.jpg">
+                    <div class="project-col col text-center h-100 p-20">
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample3.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 3
+                            </span>
                         </div>
-                        <span class="project-title">
-                            Project 5
-                        </span>
-                    </div>
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample3.jpg">
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample2.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 4
+                            </span>
                         </div>
-                        <span class="project-title">
-                            Project 6
-                        </span>    
                     </div>
-                    
+                    <div class="project-col col text-center h-100 p-20">
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample1.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 5
+                            </span>
+                        </div>
+                        <div class="project-box" >
+                            <div class="image-wrap">
+                                <img src="/src/main/webapp/resources/image/project-sample3.jpg">
+                            </div>
+                            <span class="project-title">
+                                Project 
+                            </span>    
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
-            <div id="team-project-detail" class="page row h-100" style="flex:3;">
-                <div class="project-col col text-center h-100 p-20">
-                    <div class="project-box">
-                        <a href="#" onclick="navigateTo('team-project-list')"></a>
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample1.jpg">
-                        </div>
-                        <span class="project-title">
-                            Project 1
-                        </span>
-                    </div>
-                    
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample2.jpg">
-                        </div>
-                        <span class="project-title">
-                            Project 2
-                        </span>
-                    </div>
-                </div>
-                <div class="project-col col text-center h-100 p-20">
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample3.jpg">
-                        </div>
-                        <span class="project-title">
-                            Project 3
-                        </span>
-                    </div>
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample2.jpg">
-                        </div>
-                        <span class="project-title">
-                            Project 4
-                        </span>
-                    </div>
-                </div>
-                <div class="project-col col text-center h-100 p-20">
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample1.jpg">
-                        </div>
-                        <span class="project-title">
-                            Project 5
-                        </span>
-                    </div>
-                    <div class="project-box">
-                        <div class="image-wrap">
-                            <img src="/src/main/webapp/resources/image/project-sample3.jpg">
-                        </div>
-                        <span class="project-title">
-                            Project 6
-                        </span>    
-                    </div>
-                </div>
-            </div>
+            
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div> <!-- end page-container-->
     </main>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="/src/main//webapp/resources/js/swiper_js/swiper.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="/src/main/webapp/resources/js/proj_list.js"></script>
+    
 </body>
 </html>

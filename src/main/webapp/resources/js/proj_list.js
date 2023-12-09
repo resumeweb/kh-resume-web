@@ -2,11 +2,15 @@ const MAX_WIDTH = 90;
 const MIN_WIDTH = 70;
 const MAX_HEIGHT = 35;
 const MIN_HEIGHT = 25;
+
+AOS.init();
 const init = () => {
+    
     // .project-box 요소 
     const projectBoxArr = document.querySelectorAll(".propject-box");
+    // 스크롤
     
-    console.log(projectBoxArr);
+    // console.log(projectBoxArr);
 
     for(let projectBox of projectBoxArr) {
         
@@ -20,9 +24,7 @@ const init = () => {
         projectBox.style.width = sizeInfo.width + "%";
         projectBox.style.height = sizeInfo.height + "%";
     }
-
 };
-
 const getBoxSize = () => {  
     // 최소값으로 초기화
     let width = MIN_WIDTH;
@@ -39,25 +41,48 @@ const getBoxSize = () => {
 
 init();
 
-function navigateTo(pageId) {
-  // style 속성에 display:none이 없는 요소 가져오기 => 현재 보여지고 있는 페이지
-  const currentPage = document.querySelector('.page:not([style*="display: none"])');
+const pageContainerSwiper = new Swiper('#pageContainer', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
 
-  // 파라미터로 받은 id값을 가지고 있는 페이지 요소
-  const nextPage = document.getElementById(pageId);
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-  // 다음 페이지 요소를 화면 위쪽에 숨겨둠
-  gsap.set(nextPage, { y: '-100%' });
-  nextPage.style.display = 'flex'; // 새 페이지 표시
-  nextPage.style.justifyContent = "center"
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-  // 현재 페이지를 아래쪽으로 숨겨둠
-  gsap.to(currentPage, {
-    duration: 0.2,
-    y: '+100%', // 현재 페이지를 오른쪽으로 밀어 슬라이드 아웃
-    onComplete: () => {
-      currentPage.style.display = 'none'; // 현재 페이지 숨김
-      gsap.to(nextPage, { duration: 0.2, y: '0%' }); // 위에 숨겨둔 페이지를 아래로 밀어 슬라이드 인
-    },
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  mousewheel: {
+    forceToAxis: true,
+  },
+});
+
+const elements = document.querySelectorAll('.project-box');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // 요소가 화면에 보일 때 AOS 애니메이션 실행
+      const element = entry.target;
+      const animation = element.getAttribute('data-aos');
+      element.classList.add('animated', animation);
+    }
   });
-}
+}, {
+  root: null,
+  threshold: 0.5 // 요소가 화면에 50% 이상 보일 때 감지
+});
+
+elements.forEach(element => {
+  observer.observe(element);
+});
