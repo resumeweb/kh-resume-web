@@ -85,12 +85,3 @@ table {
  이미지 hover CSS
  ********************************************************************************************************************************************/
 
-.img_hover_effect {
-	transition: all 0.2s linear;
-	object-fit:cover;
-}
-
-.img_hover_effect:hover{
-	transform: scale(1.4);
-
-}

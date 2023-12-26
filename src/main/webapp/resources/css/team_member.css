@@ -54,7 +54,7 @@
 
 /* 프로필-사진 이미지 */
 .member_profile_img {
-    background-color: #686767;
+    /* background-color: #686767; */
     width: 100%;
     height: 100%;
 }
@@ -65,7 +65,30 @@
     font-size: 1.5vw;
 }
 
+/* 수정부분 */
+.img_hover_effect{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover_effect:hover .img_hover_effect {
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+    position: relative;
+}
 
+.hover_effect:hover .img_hover_effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* 회색 반투명 배경 */
+    filter: blur(10px); /* 흐림 효과 */
+    z-index: -1; /* 이미지보다 낮은 z-index로 설정 */
+}
 /*******************************************/
 
 /* 1000px 이하 일때 아래 스타일 적용 */
