@@ -42,7 +42,6 @@
     display: flex;
     /* 간격을 조절하기 위한 여백을 빼고 너비를 설정합니다. */
     width: calc(33.33% - 10px); 
-    /* 여백이 너비에 포함되도록 박스 크기를 조절합니다.*/
     box-sizing: border-box; 
 }
 
@@ -50,6 +49,7 @@
 
 /* 프로필-사진 이미지 부모*/
 .member_profile_photo{
+    cursor: pointer;
     overflow:hidden;
     background-color: aliceblue;
     height: 13em;
