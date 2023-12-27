@@ -24,84 +24,64 @@
 /*******************************************/
 /* 프로필을 감싼 Div */
 .member_profile_div{ 
+    height: 100%;
     width: 100%; 
     display: flex;
     flex-wrap: wrap;
     /* 간격띄우고정렬 */
     justify-content: space-evenly;
-    /* align-content: space-between */
+    /* 줄바꿈 허용 */
+    flex-wrap: wrap;
 }
 /*******************************************/
 /* 프로필전체 */
 .member_profile {
-    /* border: 1px solid black; */
-    /* height: 10.5em; */
-    /* width: 19em; */
-    width: 30%;
-    font-size: 1em;
-    margin:40px 0px 40px 0px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    /* 간격을 조절하기 위한 여백을 빼고 너비를 설정합니다. */
+    width: calc(33.33% - 10px); 
+    /* 여백이 너비에 포함되도록 박스 크기를 조절합니다.*/
+    box-sizing: border-box; 
 }
+
+
 
 /* 프로필-사진 이미지 부모*/
 .member_profile_photo{
     overflow:hidden;
     background-color: aliceblue;
-    height: 9em;
-    width: 9em;
+    height: 13em;
+    width: 13em;
     display: inline-block;
-
 }
 
 /* 프로필-사진 이미지 */
 .member_profile_img {
-    /* background-color: #686767; */
+    background-color: white;
     width: 100%;
     height: 100%;
 }
 /* 프로필-이름 */
 .mameber_name{
-    margin-top: 10px;
+    margin-top: 25px;
     color: white;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
-/* 수정부분 */
-.img_hover_effect{
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hover_effect:hover .img_hover_effect {
-	-webkit-transform: scale(1.5);
-	transform: scale(1.5);
-    position: relative;
-}
-
-.hover_effect:hover .img_hover_effect::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* 회색 반투명 배경 */
-    filter: blur(10px); /* 흐림 효과 */
-    z-index: -1; /* 이미지보다 낮은 z-index로 설정 */
-}
 /*******************************************/
 
-/* 1000px 이하 일때 아래 스타일 적용 */
 @media (max-width : 1000px){
 
     /* 프로필 위치 변경 */
     .member_profile{
         min-width: 40%;
+        margin-bottom: 30px;
     }
     /* 이름 폰트 사이즈 */
     .mameber_name{
         font-size: 1.3em;
     }
 }
-
 
