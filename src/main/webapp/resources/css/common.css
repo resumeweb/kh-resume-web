@@ -100,6 +100,8 @@ table {
     </div>
 </div>
  */
+ 
+ /* 이미지 확대 */
 .img_hover_effect{
 	-webkit-transform: scale(1);
 	transform: scale(1);
