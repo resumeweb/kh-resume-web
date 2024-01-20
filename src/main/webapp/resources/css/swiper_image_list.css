@@ -56,3 +56,15 @@
 .container-fluid{
     height: 100vh;
 }
+
+.image_list_total_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3rem;
+}
+
+.image_list_center{
+    display: flex;
+}
